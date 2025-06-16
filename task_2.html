@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Polygons - Task 2</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="task_2style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Finding the Closest Places</h1>
+    <div class="subtitle">Map by Emese Gojdár</div>
+  </div>
+
+  <div class="container">
+    <div id="map"></div>
+    
+    <div class="sidebar">
+      <h3>Locations</h3>
+      <div id="polygonList">
+        <ol>
+          <li id="poly-0">Poligon 1 - Margaret Island</li>
+          <li id="poly-1">Poligon 2 - Városliget</li>
+          <li id="poly-2">Poligon 3 - Népliget</li>
+          <li id="poly-3">Poligon 4 - Városmajor</li>
+          <li id="poly-4">Poligon 5 - Kossuth Square</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script src="task_2.js"></script>
+</body>
+</html>

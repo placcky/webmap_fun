@@ -1,0 +1,133 @@
+/* Styling the map*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: linear-gradient(135deg, #c9afb1 0%, #b07f8f 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container with frame */
+.map-container {
+  background: #f8f6f7;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 
+    0 8px 32px rgba(88, 66, 73, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 3px solid #584249;
+  max-width: 90vw;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+/* Decorative elements */
+.map-container::before,
+.map-container::after {
+  content: '.✦*';
+  position: absolute;
+  color: #b07f8f;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.map-container::before {
+  top: 1rem;
+  left: 1rem;
+}
+
+.map-container::after {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  color: #584249;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: serif;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Underline decor*/
+h2::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(90deg, #b07f8f, #c9afb1);
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+/* Map style */
+#map {
+  height: 650px;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #b07f8f;
+  box-shadow: 
+    0 4px 16px rgba(88, 66, 73, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .map-container {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  #map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    padding: 1rem;
+    border-radius: 12px;
+    border-width: 2px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  #map {
+    height: 350px;
+    border-radius: 8px;
+  }
+}

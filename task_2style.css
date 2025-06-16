@@ -1,0 +1,143 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: white;
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .header h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.25rem;
+    }
+
+    .header .subtitle {
+      font-size: 0.875rem;
+      color: #666;
+      font-weight: 400;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 120px);
+      gap: 1.5rem;
+      padding: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    #map {
+      flex: 1;
+      height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e5e5e5;
+    }
+
+    .sidebar {
+      width: 280px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    #polygonList ol {
+      list-style: none;
+      counter-reset: item;
+    }
+
+    #polygonList li {
+      counter-increment: item;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #f0f0f0;
+      background: #fafafa;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      font-size: 0.875rem;
+    }
+
+    #polygonList li::before {
+      content: counter(item);
+      background: #e5e5e5;
+      color: #666;
+      font-weight: 600;
+      font-size: 0.75rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+    }
+
+    #polygonList li:hover {
+      background: #f0f0f0;
+      border-color: #d0d0d0;
+      transform: translateY(-1px);
+    }
+
+    .highlight {
+      background: #e8f4fd !important;
+      border-color: #3b82f6 !important;
+      color: #1e40af;
+    }
+
+    .highlight::before {
+      background: #3b82f6 !important;
+      color: white !important;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+
+      .sidebar {
+        width: 100%;
+        order: -1;
+      }
+
+      #map {
+        height: 400px;
+      }
+
+      .header {
+        padding: 1.5rem 1rem 1rem;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+      }
+    }
